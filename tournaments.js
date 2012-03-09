@@ -863,12 +863,7 @@ module.exports = {
 			SESSION.global().permaTours = [];
 		permaTours = SESSION.global().permaTours;
 
-		var tourchannel, channelname = "Tournaments";
-		if (sys.existChannel(channelname)) {
-			tourchannel = sys.channelId(channelname);
-		} else {
-			tourchannel = sys.createChannel(channelname);
-		}
+		var tourchannel = 0, channelname = "Tohjo Falls";
 
 		// Do not reinitialize - in case init is called many times
 		if (module.tournaments[tourchannel])
