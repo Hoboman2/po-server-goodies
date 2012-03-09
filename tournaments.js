@@ -125,7 +125,7 @@ function Tournament(channel)
 
 	function wall(message) {
 		sys.sendAll(message, self.channel);
-		if (self.main) {
+		if (self.main && self.channel != 0) {
 			sys.sendAll(message, 0);
 		}
 	}
