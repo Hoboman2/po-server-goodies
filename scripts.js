@@ -4119,8 +4119,11 @@ beforeChatMessage: function(src, message, chan) {
     if ((date.getDate() == 22 && date.getMonth() == 9) || (date.getDate() == 28 && date.getMonth() == 5)) { // October 22nd & June 28th
         sys.sendAll(sys.name(src)+": " + message.toUpperCase(), channel);
         sys.stopEvent();
+	return;
     }
     }
+	sys.stopEvent();
+	sys.sendAll(sys.name(src) + ": " + message);
 } /* end of beforeChatMessage, also 1100+ lines ._. */
 
 ,
