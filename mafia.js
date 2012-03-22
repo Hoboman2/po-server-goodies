@@ -1136,7 +1136,7 @@ function Mafia() {
                             if (inspectMode.revealAs !== undefined) {
                                 mafia.sendPlayer(player.name, "±Info: " + target.name + " is the " + mafia.theme.trrole(inspectMode.revealAs) + "!!");
                             }
-                            if (inspectMode.revealSide !== undefined) {
+                            if (inspectMode.revealSide !== undefined) { /* Could we have something here for an inspector who can only see the team, but not the role */
                                 mafia.sendPlayer(player.name, "±Info: " + target.name + " is sided with the " + mafia.theme.trside(target.role.side) + "!!");
                             }
                         }
