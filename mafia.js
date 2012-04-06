@@ -1131,6 +1131,7 @@ function Mafia(mafiachan) {
                         if (!mafia.isInGame(target)) continue;
                         target = mafia.players[target];
                         var inspectMode = target.role.actions.inspect;
+var Sight=Action.Sight; //Thinking of some way to get it so that inspector would only be able to see sides.
                         if (target.safeguarded) {
                             mafia.sendPlayer(player.name, "±Game: Your target (" + target.name + ") was guarded!");
                         } else if (inspectMode === undefined) {
